@@ -1,5 +1,5 @@
-import Datastore from "nedb-promises";
+var Datastore = require('nedb-promises')
 
 db = new Datastore({ filename: 'Database', autoload: true });
 
-export { db };
+module.exports = db;

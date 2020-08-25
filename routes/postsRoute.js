@@ -1,6 +1,6 @@
-import Router from 'express';
-import controller from '../controllers/postsController.mjs';
+const { Router } = require("express");
 
+const controller = require('../controllers/postsController');
 const router = new Router()
 
 console.log("postsRoute körs")
@@ -11,4 +11,4 @@ router.post('/posts', controller.postPostController)
 router.delete('/posts/:id', controller.deletePostController)
 router.patch('/posts/:id', controller.patchPostController)
 
-export default router;
+module.exports = router

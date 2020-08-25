@@ -1,5 +1,5 @@
-import Router from 'express';
-import controller from '../controllers/commentsController.mjs';
+const Router = require('express');
+const controller = require('../controllers/commentsController');
 
 const router = new Router()
 
@@ -11,4 +11,4 @@ router.post('/comments', controller.postCommentController)
 router.delete('/comments/:id', controller.deleteCommentController)
 router.patch('/comments/:id', controller.patchCommentController)
 
-export default router;
+module.exports = router;

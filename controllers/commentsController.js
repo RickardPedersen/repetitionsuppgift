@@ -1,5 +1,6 @@
-import model from '../models/commentsModel.mjs';
-console.log('commentsController körs')
+const model = require('../models/commentsModel');
+
+console.log('commentsController läses')
 
 function getCommentsController() {
     console.log("testing")
@@ -22,4 +23,10 @@ function patchCommentController() {
 
 }
 
-export default { getCommentsController, getSingleCommentController, postCommentController, deleteCommentController, patchCommentController}
+module.exports = {
+    getCommentsController,
+    getSingleCommentController,
+    postCommentController,
+    deleteCommentController,
+    patchCommentController
+}

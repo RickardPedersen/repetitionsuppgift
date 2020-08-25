@@ -1,5 +1,5 @@
-//import db from '../database/database'
-
+var db = require('../database/Database')
+console.log("databasen är: " + db)
 function getCommentsModel(){
     console.log("aktiverade getCommentsModel")
 /*
@@ -40,5 +40,10 @@ function patchCommentModel(){
     });
 }
 
-
-export default {getCommentsModel, getSingleCommentModel, postCommentModelModel, deleteCommentModel, patchCommentModel}
+module.exports = {
+    getCommentsModel,
+    getSingleCommentModel,
+    postCommentModelModel,
+    deleteCommentModel,
+    patchCommentModel
+}
